@@ -16,9 +16,10 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "whatsapp-web.js": "^1.23.0",
+    "puppeteer": "^21.11.0",
+    "qrcode": "^1.5.4",
     "qrcode-terminal": "^0.12.0",
-    "puppeteer": "^21.0.0"
+    "whatsapp-web.js": "^1.33.3"
   },
   "devDependencies": {
     "nodemon": "^3.0.0"

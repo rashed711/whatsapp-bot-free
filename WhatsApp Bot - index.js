@@ -204,7 +204,17 @@ process.on('SIGINT', async () => {
     process.exit(0);
 });
 
-// إبقاء التطبيق يعمل
+// إبقاء التطبيق يعمل + إعداد HTTP server بسيط لـ Railway
+const http = require('http');
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('🤖 بوت واتساب يعمل بنجاح!\nWhatsApp Bot is running successfully!');
+});
+
+server.listen(PORT, () => {
+    console.log(`🌐 Server is running on port ${PORT}`);
+});
+
 setInterval(() => {
     console.log('💚 البوت يعمل...', new Date().toLocaleString('ar-EG'));
 }, 300000); // كل 5 دقائق
